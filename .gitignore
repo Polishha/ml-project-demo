@@ -1,0 +1,28 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Данные и модели
+data/
+*.csv
+*.pkl
+*.joblib
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Тесты
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

@@ -1,0 +1,7 @@
+data:
+  path: "data/train.csv"
+  strategy: "mean"
+
+model:
+  max_iter: 1000
+  random_state: 42

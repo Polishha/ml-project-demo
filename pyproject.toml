@@ -1,0 +1,41 @@
+[project]
+name = "ml-project-demo"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Polina Marina",email = "stotczkaya@bk.ru"}
+]
+requires-python = ">3.12,<4.0"
+dependencies = [
+    "pandas (>=3.0.6,<4.0.0)",
+    "scikit-learn (>=1.9.1,<2.0.0)",
+    "pyyaml (>=6.0.3,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ruff (>=0.16.10,<0.17.0)",
+    "pre-commit (>=4.6.2,<5.0.0)",
+    "pytest (>=9.1.1,<10.0.0)"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
